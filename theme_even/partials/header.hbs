@@ -1,0 +1,37 @@
+<header class="masthead">
+<div class="logo">
+  {{#image}}
+    <img src="{{.}}">
+  {{/image}}
+</div>
+<div class="content">
+<div class="name">
+  {{#name}}
+    <h1>{{.}}</h1>
+  {{/name}}
+    {{#label}}
+    <h2>{{.}}</h2>
+  {{/label}}
+</div>
+<div class="contacts">
+    {{#location}}
+     {{#countryCode}}
+                    <a>{{.}},
+     {{/countryCode}}
+            {{#city}}
+                    {{.}}
+     {{/city}}
+       </a>
+    {{/location}}
+    {{#email}}
+        <a href="mailto:{{.}}">{{.}}</a>
+    {{/email}}
+    {{#phone}}
+       <a>{{.}}</a>
+    {{/phone}}
+    {{#url}}
+        <a href="{{.}}">{{formatURL .}}</a>
+    {{/url}}
+  </div>
+ </div>
+</header>

@@ -1,0 +1,134 @@
+{
+  "basics": {
+    "name": "Kamil Urbanek",
+    "label": "Automation Engineer",
+    "image": "face.png",
+    "email": "urbanek.kamil@gmail.com",
+    "phone": "518-755-000",
+    "url": "https://devnet.blog",
+    "summary": "I've started in/at the bottom of a food chain as a Engineer in Master Control Room team. After a while I changed it to being a *secretary* of a Network Squad Product/Owner. As time pass by, I learned that my laziness have different meanings: Network Automation and DevOps. From that day, I'm trying to tell everyone around me why and how to do it.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "countryCode": "PL",
+      "city": "Katowice",
+      "region": "Silesian"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "kanguros",
+        "url": "https://github.com/kanguros"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "ING Service Polska",
+      "position": "President",
+      "url": "https://company.com",
+      "startDate": "2013-01-01",
+      "endDate": "2014-01-01",
+      "summary": "Description…",
+      "highlights": [
+        "Started the company"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University",
+      "url": "https://institution.com/",
+      "area": "Software Development",
+      "studyType": "Bachelor",
+      "startDate": "2011-01-01",
+      "endDate": "2013-01-01",
+      "score": "4.0",
+      "courses": [
+        "DB1101 - Basic SQL"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Python",
+      "level": "",
+      "keywords": [
+        "requests",
+        "netmiko",
+        "napalm",
+        "click",
+        "rich",
+        "pandas",
+        "pydantic"
+      ]
+    },
+    {
+      "name": "Tooling",
+      "level": "",
+      "keywords": [
+        "PyCharm",
+        "Git",
+        "Typora"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "level": "",
+      "keywords": [
+        "StackStorm",
+        "Azure DevOps",
+        "Docker",
+        "Ansible",
+        "GitHub"
+      ]
+    },
+    {
+      "name": "Network Devices",
+      "level": "",
+      "keywords": [
+        "Palo Alto Panorama",
+        "Palo Alto Firewall",
+        "Cisco ISE",
+        "Cisco IOS",
+        "NXOS"
+      ]
+    }
+  ],
+  "languages": [  ],
+  "interests": [
+    {
+      "name": "",
+      "keywords": [
+        "Manual crafting",
+        "Woodworking",
+        "Hiking"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project",
+      "description": "Description…",
+      "highlights": [
+        "Won award at AIHacks 2016"
+      ],
+      "keywords": [
+        "HTML"
+      ],
+      "startDate": "2019-01-01",
+      "endDate": "2021-01-01",
+      "url": "https://project.com/",
+      "roles": [
+        "Team Lead"
+      ],
+      "entity": "Entity",
+      "type": "application"
+    }
+  ],
+  "volunteer": [],
+  "references": [],
+  "publications": [],
+  "awards": [],
+  "certificates": []
+}
