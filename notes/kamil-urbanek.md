@@ -12,18 +12,6 @@
     <img alt="" src="assets/ddb814b91fcf1d4b12b27688d32b2664492031f4.jpg" style="float:right">
   </div>
 </div>
-
-### Experience & Projects
-
-- Introduce and maintain an open-source orchestrating application *StackStorm*. Deployed to OpenShift, with Docker images build via pipeline. Third-party components deployed and maintained using Ansible Playbooks. 
-- Designed and implemented *Source of Truth* (department scope) database along with automatic data distribution to multiple dependent databases.  Data models and theirs relations defined as a code, self-documenting.
-- Designed, develop and maintain ETL. It includes extracting information from many network device's types and databases. 
-- Designed, develop and maintain automatic incident resolution for many different network devices based on alerts from monitoring tool.
-- Designed, develop and maintain automated patching of network devices. 
-- Described and implemented firewall policies formulated on the results of data pipeline.  Defined set of rules and conditions for data from: traffic logs, IPAM and CMDBs.
-- Developed, pipelined, maintained tens of Python packages such as: `requests's` API wrappers, `netmiko` handlers, `napalm` drivers, scripts and CLI applications on `click` & `rich`,  
-- Trained, guided and mentored colleagues in Python programming and network automation. 
-
 <div style="display: flex">
     <div style="flex: 50%">
         <h3>Tech Skills</h3>
@@ -55,7 +43,16 @@
     </div>
 </div>
 
+### Experience & Projects
 
+- Introduce and maintain an open-source orchestrating application *StackStorm*. Deployed to OpenShift, with Docker images build via pipeline. Third-party components deployed and maintained using Ansible Playbooks. 
+- Designed and implemented *Source of Truth* (department scope) database along with automatic data distribution to multiple dependent databases.  Data models and theirs relations defined as a code, self-documenting.
+- Designed, develop and maintain ETL. It includes extracting information from many network device's types and databases. 
+- Designed, implemented and maintain automatic incident resolution for many different network devices based on alerts from monitoring tool.
+- Designed, implemented and maintain automated patching of network devices. 
+- Described and implemented firewall policies formulated on the results of data pipeline.  Defined set of rules and conditions for data from: traffic logs, IPAM and CMDBs.
+- Developed, pipelined, maintained tens of Python packages such as: `requests's` API wrappers, `netmiko` handlers, `napalm` drivers, scripts and CLI applications on `click` & `rich`,  
+- Trained, guided and mentored colleagues in Python programming and network automation. 
 
 ### Jobs
 
