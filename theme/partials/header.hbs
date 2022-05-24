@@ -1,4 +1,4 @@
-<header class="masthead">
+<section id="masthead">
 <div class="logo">
   {{#image}}
     <img src="{{.}}">
@@ -15,23 +15,25 @@
 </div>
 <div class="contacts">
     {{#location}}
-     {{#countryCode}}
-                    <a>{{.}},
-     {{/countryCode}}
-            {{#city}}
-                    {{.}}
+            <p>
+     {{#city}}
+           <a>{{.}},
      {{/city}}
+            {{#countryCode}}
+                    {{.}}
+     {{/countryCode}}
        </a>
+       </p>
     {{/location}}
     {{#email}}
-        <a href="mailto:{{.}}">{{.}}</a>
+        <p><a href="mailto:{{.}}">{{.}}</a></p>
     {{/email}}
     {{#phone}}
-       <a>{{.}}</a>
+       <p><a>{{.}}</a></p>
     {{/phone}}
     {{#url}}
-        <a href="{{.}}">{{formatURL .}}</a>
+        <p><a href="{{.}}">{{formatURL .}}</a></p>
     {{/url}}
   </div>
  </div>
-</header>
+</section>
