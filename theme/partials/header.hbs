@@ -1,0 +1,39 @@
+<section id="masthead">
+<div class="logo">
+  {{#image}}
+    <img src="{{.}}">
+  {{/image}}
+</div>
+<div class="content">
+<div class="name">
+  {{#name}}
+    <h1>{{.}}</h1>
+  {{/name}}
+    {{#label}}
+    <h2>{{.}}</h2>
+  {{/label}}
+</div>
+<div class="contacts">
+    {{#location}}
+            <p>
+     {{#city}}
+           <a>{{.}},
+     {{/city}}
+            {{#countryCode}}
+                    {{.}}
+     {{/countryCode}}
+       </a>
+       </p>
+    {{/location}}
+    {{#email}}
+        <p><a href="mailto:{{.}}">{{.}}</a></p>
+    {{/email}}
+    {{#phone}}
+       <p><a>{{.}}</a></p>
+    {{/phone}}
+    {{#url}}
+        <p><a href="{{.}}">{{formatURL .}}</a></p>
+    {{/url}}
+  </div>
+ </div>
+</section>
