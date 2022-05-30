@@ -120,7 +120,7 @@ cite::before {
 }
 
 #masthead {
-margin-top: 10px;
+  margin-top: 10px;
   background-color: var(--mutedColor);
   grid-column: full;
   padding: 0.7em 0;
@@ -134,7 +134,6 @@ color: var(--secondaryColor);
 
 #masthead .logo {
   grid-column: side;
-
 }
 
 #masthead .content {
@@ -194,6 +193,14 @@ blockquote > * + * {
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
+}
+
+.tag:first-child::before {
+  border-bottom: 1px solid var(--secondaryColor);
+  content: '';
+  flex-grow: 1;
+  margin: 0 1em;
+  order: 1;
 }
 
 .tag-list > li {

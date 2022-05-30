@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "json-resume": "^1.0.4",
     "resume-cli": "^3.0.7"
   }
 }
