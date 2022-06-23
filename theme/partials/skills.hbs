@@ -3,12 +3,15 @@
     <h3>Skills</h3>
     <div class="grid-list">
       {{#each resume.skills}}
-        <div class="tag">
+        <article>
+            <div class="spaced-list">
           {{#name}}
             <h4>{{.}}</h4>
+                      {{/name}}
             <span>
             </span>
-          {{/name}}
+
+                  </div>
           {{#if keywords.length}}
             <ul class="tag-list">
               {{#keywords}}
@@ -16,7 +19,8 @@
               {{/keywords}}
             </ul>
           {{/if}}
-        </div>
+
+       </article>
       {{/each}}
     </div>
   </section>

@@ -6,6 +6,7 @@
   --secondaryColor: #c7c5c5;
   --linkColor: #2ecc71;
   --mutedColor: #f4f6f6;
+  --titleColor: #323232;
 
   /* Typography */
   --ratio: 1.20;
@@ -94,7 +95,9 @@ h3 {
 }
 
 h4 {
-  font-size: var(--scale2);
+  font-size: var(--scale3);
+  line-height: 1.15;
+  color: var(--titleColor);
 }
 
 h5 {
@@ -129,6 +132,7 @@ cite::before {
 
 #masthead a {
 color: var(--secondaryColor);
+text-decoration: none;
 }
 
 
@@ -157,7 +161,7 @@ color: var(--secondaryColor);
 
 article > * + *,
 blockquote > * + * {
-  margin-top: 0.6em;
+  margin-top: 0.3em;
 }
 
 .stack {
@@ -166,8 +170,12 @@ blockquote > * + * {
 }
 
 .grid-list {
-  display: grid;
+  display: flex;
   gap: 1em;
+}
+
+.grid-list > article {
+  width: 50%;
 }
 
 .spaced-list {

@@ -15,6 +15,7 @@
   --secondaryColor: #c7c5c5;
   --linkColor: #2ecc71;
   --mutedColor: #f4f6f6;
+  --titleColor: #323232;
 
   /* Typography */
   --ratio: 1.20;
@@ -103,7 +104,9 @@ h3 {
 }
 
 h4 {
-  font-size: var(--scale2);
+  font-size: var(--scale3);
+  line-height: 1.15;
+  color: var(--titleColor);
 }
 
 h5 {
@@ -129,7 +132,7 @@ cite::before {
 }
 
 #masthead {
-margin-top: 10px;
+  margin-top: 10px;
   background-color: var(--mutedColor);
   grid-column: full;
   padding: 0.7em 0;
@@ -138,17 +141,13 @@ margin-top: 10px;
 
 #masthead a {
 color: var(--secondaryColor);
+text-decoration: none;
 }
 
 
 #masthead .logo {
   grid-column: side;
-
-
 }
-
-
-
 
 #masthead .content {
   grid-column: content;
@@ -171,7 +170,7 @@ color: var(--secondaryColor);
 
 article > * + *,
 blockquote > * + * {
-  margin-top: 0.6em;
+  margin-top: 0.3em;
 }
 
 .stack {
@@ -180,8 +179,12 @@ blockquote > * + * {
 }
 
 .grid-list {
-  display: grid;
+  display: flex;
   gap: 1em;
+}
+
+.grid-list > article {
+  width: 50%;
 }
 
 .spaced-list {
@@ -271,10 +274,13 @@ blockquote > * + * {
       <section id="skills">
         <h3>Skills</h3>
         <div class="grid-list">
-            <div class="tag">
+            <article>
+                <div class="spaced-list">
                 <h4>Python</h4>
                 <span>
                 </span>
+    
+                      </div>
                 <ul class="tag-list">
                     <li>requests</li>
                     <li>netmiko</li>
@@ -283,35 +289,48 @@ blockquote > * + * {
                     <li>rich</li>
                     <li>pandas</li>
                     <li>pydantic</li>
+                    <li>jinja</li>
                 </ul>
-            </div>
-            <div class="tag">
-                <h4>Tooling</h4>
+    
+           </article>
+            <article>
+                <div class="spaced-list">
+                <h4>Tools</h4>
                 <span>
                 </span>
+    
+                      </div>
                 <ul class="tag-list">
                     <li>PyCharm</li>
+                    <li>PowerShell</li>
                     <li>Git</li>
-                    <li>Powershell</li>
-                    <li>Typora</li>
+                    <li>Bash</li>
                 </ul>
-            </div>
-            <div class="tag">
+    
+           </article>
+            <article>
+                <div class="spaced-list">
                 <h4>DevOps</h4>
                 <span>
                 </span>
+    
+                      </div>
                 <ul class="tag-list">
                     <li>StackStorm</li>
                     <li>Azure DevOps</li>
-                    <li>Docker</li>
                     <li>Ansible</li>
+                    <li>Docker</li>
                     <li>GitHub</li>
                 </ul>
-            </div>
-            <div class="tag">
-                <h4>Network Devices</h4>
+    
+           </article>
+            <article>
+                <div class="spaced-list">
+                <h4>Network</h4>
                 <span>
                 </span>
+    
+                      </div>
                 <ul class="tag-list">
                     <li>Palo Alto Panorama</li>
                     <li>Palo Alto Firewall</li>
@@ -319,18 +338,17 @@ blockquote > * + * {
                     <li>Cisco IOS</li>
                     <li>Cisco NXOS</li>
                 </ul>
-            </div>
+    
+           </article>
         </div>
       </section>
       <section id="projects">
-        <h3>Experience</h3>
+        <h3>Exp</h3>
         <div class="grid-list">
             <article>
                 <div class="spaced-list">
                   <h4>StackStorm</h4>
                   <span>
-                  
-                  
                   </span>
                 </div>
                 <p>Introduce and maintain an open-source orchestrating applicationDeployed to OpenShift, with Docker images build via pipeline. Third-party components deployed and maintained using Ansible Playbooks.</p>
@@ -339,8 +357,6 @@ blockquote > * + * {
                 <div class="spaced-list">
                   <h4>Network Automation</h4>
                   <span>
-                  
-                  
                   </span>
                 </div>
                 <p>Design, implement and maintain solutions such as:</p>
@@ -355,8 +371,6 @@ blockquote > * + * {
                 <div class="spaced-list">
                   <h4>Development</h4>
                   <span>
-                  
-                  
                   </span>
                 </div>
                 
@@ -381,7 +395,7 @@ blockquote > * + * {
                   </span>
                 </div>
                 <div class="spaced-list">
-                    <strong>IAAS Network - Senior DevOps Engineer</strong>
+                  IAAS Network - Senior DevOps Engineer
                     <p></p>
                 </div>
               </header>
@@ -400,7 +414,7 @@ blockquote > * + * {
                   </span>
                 </div>
                 <div class="spaced-list">
-                    <strong>Squad Network Stack - DevOps Engineer</strong>
+                  Squad Network Stack - DevOps Engineer
                     <p></p>
                 </div>
               </header>
@@ -420,7 +434,7 @@ blockquote > * + * {
                   </span>
                 </div>
                 <div class="spaced-list">
-                    <strong>Master Control Room - IT Engineer</strong>
+                  Master Control Room - IT Engineer
                     <p></p>
                 </div>
               </header>
