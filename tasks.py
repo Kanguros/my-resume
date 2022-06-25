@@ -1,8 +1,10 @@
 import json
+import os
+import webbrowser
 
+import pdfkit
 import yaml
 from invoke import task, Failure
-import pdfkit
 
 
 def p(s, prefix="|> "):
@@ -53,6 +55,8 @@ def html(c):
         raise Failure(f"FAILED. Export failed due to: {output['stderr']}")
     else:
         p(f"Resume exported as [{html_file}]")
+
+    webbrowser.open_new_tab(os.path.abspath(html_file))
 
 
 @task(html)

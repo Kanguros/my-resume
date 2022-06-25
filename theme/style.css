@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 
+@page {
+  size: A4;
+  margin: 0;
+}
+
 :root {
   /* Colors */
   --primaryColor: #212529;
@@ -24,14 +29,16 @@
   padding: 0;
 }
 
+
 html {
-padding: 12px;
 
   font-size: 12px;
-  font-family: 'Fira Sans', sans-serif;
-}
+  }
 
-body {
+
+.bodish {
+      padding: 12px;
+
   color: var(--primaryColor);
   display: grid;
   font: 1em/1.5 'Fira Sans', sans-serif;
@@ -42,12 +49,14 @@ body {
     [main-start side-start]
     minmax(min-content, 5em)
     [side-end content-start]
-    minmax(min-content, 53em)
+    minmax(min-content, 60em)
     [main-end content-end]
     1fr
     [full-end];
-  grid-template-rows: 1 [content] 0;
+  grid-template-rows: 1 [content] 1;
   margin-bottom: 4em;
+  width: 210mm;
+  height: minmax(min-content, 297mm);
 }
 
 
@@ -61,7 +70,8 @@ li + li {
 }
 
 li::marker {
-  color: var(--mutedColor);
+  color: var(--secondaryColor);
+
 }
 
 
@@ -92,6 +102,8 @@ h3 {
   font-size: var(--scale3);
   grid-column: side;
   margin-bottom: 1rem;
+  text-align: right;
+  margin-bottom: inherit;
 }
 
 h4 {
@@ -192,6 +204,12 @@ blockquote > * + * {
   order: 1;
 }
 
+ul {
+
+list-style-type: '\23F5';
+
+}
+
 .spaced-list > :nth-child(2) {
   order: 2;
 }
@@ -217,17 +235,6 @@ blockquote > * + * {
   padding: 0.2em 0.6em;
 }
 
-@media print, (min-width: 48em) {
-  h3 {
-    text-align: right;
-    margin-bottom: inherit;
-  }
-
-  section {
+section {
     display: contents;
   }
-
-  .grid-list {
-    grid-template-columns: 1fr 1fr;
-  }
-}

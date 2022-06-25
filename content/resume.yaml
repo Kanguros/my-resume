@@ -5,7 +5,7 @@
     email: urbanek.kamil@gmail.com
     phone: 518-755-XXX
     url: https://devnet.blog
-    summary: 'I''ve started in/at the bottom of a food chain as a Engineer in Master
+    summary: 'Started in/at the bottom of a food chain as a Engineer in Master
       Control Room team. After a while I changed it to being a *secretary* of a Network
       Squad Product/Owner. As time pass by, I learned that my laziness have different
       meanings: Network Automation and DevOps. From that day, I''m trying to tell everyone
@@ -64,17 +64,11 @@
     - pandas
     - pydantic
     - jinja
-  - name: Tools
-    level: ''
-    keywords:
-    - PyCharm
-    - PowerShell
-    - Git
-    - Bash
   - name: DevOps
     level: ''
     keywords:
     - StackStorm
+    - Git
     - Azure DevOps
     - Ansible
     - Docker
@@ -87,41 +81,43 @@
     - Cisco ISE
     - Cisco IOS
     - Cisco NXOS
-  interests:
-  - name: ''
+  - name: Tools
+    level: ''
     keywords:
-    - Manual crafting
-    - Woodworking
-    - Hiking
+    - PyCharm
+    - PowerShell
+    - Bash
+    - RHEL
+  interests: []
   projects:
-  - name: StackStorm
-    description: Introduce and maintain an open-source orchestrating applicationDeployed
-      to OpenShift, with Docker images build via pipeline. Third-party components deployed
-      and maintained using Ansible Playbooks.
-    highlights: []
-    keywords: []
-    url: ''
-    roles: []
-    entity: ''
-    type: ''
-  - name: Network Automation
-    description: 'Design, implement and maintain solutions such as:'
-    highlights:
-    - Automatic Incident Resolution.
-    - Automated Patching of network devices
-    - Source of Truth database with data distribution to dependent entities.
-    - Simplify complex process of gathering, combining and analyzing data from many different sources.
-    keywords: []
-    url: ''
-    roles: []
-    entity: ''
-    type: ''
   - name: Development
     description: ''
     highlights:
-    - Train and guide colleagues in Python.
-    - Develop and maintain by CI/CD many different Python packages.
-    - Source of Truth database with automatic data distribution to dependent entities.
+    - Write and maintain tens of Python packages, following CI/CD standards.
+    - Train, guide and mentor coworkers in Python and network automation.
+    keywords: []
+    url: ''
+    roles: []
+    entity: ''
+    type: ''
+  - name: Automation
+    description: 'Design, implement and maintain solutions such as:'
+    highlights:
+    - Automatic incident resolution on network devices.
+    - Automated patching of various network devices.
+    - Source of Truth database with data distribution to dependent entities.
+    - Simplify and shorten a complex process of gathering, merging and analyzing data from different sources for formal purposes.
+    keywords: []
+    url: ''
+    roles: []
+    entity: ''
+    type: ''
+  - name: Application
+    description: 'Introduce and maintain an open-source orchestrating application StackStorm:'
+    highlights:
+    - Deployed on OpenShift. Docker images build and delivered via Azure Pipeline.
+    - Components RabitMQ, Redis and MongoDB deployed and maintained using Ansible.
+    - Develope and maintain custom workflows.
     keywords: []
     url: ''
     roles: []

@@ -1,9 +1,9 @@
 <section id="masthead">
-<div class="logo">
-  {{#image}}
-    <img src="{{.}}">
-  {{/image}}
-</div>
+<!-- <div class="logo"> -->
+<!--   {{#image}} -->
+<!--     <img src="{{.}}"> -->
+<!--   {{/image}} -->
+<!-- </div> -->
 <div class="content">
 <div class="name">
   {{#name}}
@@ -15,24 +15,16 @@
 </div>
 <div class="contacts">
     {{#location}}
-            <p>
-     {{#city}}
-           <a>{{.}},
-     {{/city}}
-            {{#countryCode}}
-                    {{.}}
-     {{/countryCode}}
-       </a>
-       </p>
+            <p>{{#city}}<a>{{.}},{{/city}}{{#countryCode}}{{.}}{{/countryCode}}</a> &#128392;</p>
     {{/location}}
     {{#email}}
-        <p><a href="mailto:{{.}}">{{.}}</a></p>
+        <p><a href="mailto:{{.}}">{{.}}</a> &#128386;</p>
     {{/email}}
     {{#phone}}
-       <p><a>{{.}}</a></p>
+       <p><a>{{.}}</a> &#128382;</p>
     {{/phone}}
     {{#url}}
-        <p><a href="{{.}}">{{formatURL .}}</a></p>
+        <p><a href="{{.}}">{{formatURL .}}</a>  &#128427;</p>
     {{/url}}
   </div>
  </div>
