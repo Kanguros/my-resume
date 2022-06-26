@@ -9,7 +9,7 @@
   /* Colors */
   --primaryColor: #212529;
   --secondaryColor: #c7c5c5;
-  --linkColor: #2ecc71;
+  --linkColor: #525252;
   --mutedColor: #f4f6f6;
   --titleColor: #323232;
 
@@ -31,18 +31,16 @@
 
 
 html {
-
   font-size: 12px;
-  }
+}
 
 
 .bodish {
-      padding: 12px;
-
+  padding: 8px 5px;
   color: var(--primaryColor);
   display: grid;
   font: 1em/1.5 'Fira Sans', sans-serif;
-  gap: 1em;
+  gap: 0.8em;
   grid-template-columns:
     [full-start]
     1fr
@@ -62,7 +60,7 @@ html {
 
 ol,
 ul {
-  padding-left: 1em;
+  padding-left: 0.7em;
 }
 
 li + li {
@@ -85,7 +83,7 @@ h5 {
 h1,
 h2,
 h3 {
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 h1 {
@@ -138,7 +136,6 @@ cite::before {
   margin-top: 10px;
   background-color: var(--mutedColor);
   grid-column: full;
-  padding: 0.7em 0;
 
 }
 
@@ -162,13 +159,34 @@ text-decoration: none;
     align-self: center;
 }
 
-#masthead .content .contacts {
+.contacts {
     justify-self: end;
     text-align: right;
     align-self: center;
     text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-around;
+    flex-direction: row;
+    padding-top: 5px
 }
 
+a {
+color: var(--secondaryColor);
+
+    text-decoration: none;
+
+}
+
+
+
+.spaced-list > a {
+    justify-self: end;
+    text-align: right;
+    align-self: center;
+    text-decoration: none;
+    color: var(--linkColor);
+}
 
 
 article > * + *,
@@ -178,7 +196,7 @@ blockquote > * + * {
 
 .stack {
   display: grid;
-  gap: 1.5em;
+  gap: 1.3em;
 }
 
 .grid-list {
@@ -205,9 +223,7 @@ blockquote > * + * {
 }
 
 ul {
-
 list-style-type: '\23F5';
-
 }
 
 .spaced-list > :nth-child(2) {
@@ -238,3 +254,7 @@ list-style-type: '\23F5';
 section {
     display: contents;
   }
+
+.about {
+  grid-column: content;
+}

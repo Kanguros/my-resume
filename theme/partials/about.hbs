@@ -1,8 +1,22 @@
-{{#summary}}
-  <section id="about">
+<section id="about" class="about">
     <h3>I</h3>
     <article>
+    {{#summary}}
       {{{markdown .}}}
+    {{/summary}}
+        <div class="contacts">
+        {{#location}}
+            <p>&#128392; {{#city}}<a>{{.}}, {{/city}}{{#countryCode}}{{.}}{{/countryCode}}</a></p>
+        {{/location}}
+        {{#email}}
+            <p>&#128386; <a href="mailto:{{.}}">{{.}}</a></p>
+        {{/email}}
+        {{#phone}}
+           <p>&#128382; <a>{{.}}</a></p>
+        {{/phone}}
+        {{#url}}
+            <p>&#128427;  <a href="{{.}}">{{formatURL .}}</a></p>
+        {{/url}}
+        </div>
     </article>
-  </section>
-{{/summary}}
+</section>
