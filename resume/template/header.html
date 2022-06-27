@@ -1,0 +1,19 @@
+<section id="masthead">
+  <div class="logo">
+    <img src="{{ basics.image }}">
+  </div>
+  <div class="content">
+    <div class="name">
+      <h1>{{ basics.name }}</h1>
+      <h2>{{ basics.label }}</h2>
+    </div>
+    <div class="contacts">
+      <p>&#128392; <a>{{ basics.location }}</a></p>
+      <p>&#128386; <a href="mailto:{{ basics.email }}">{{ basics.email }}</a></p>
+      <p>&#128382; <a>{{ basics.phone }}</a></p>
+      {% for url in basics.urls %}
+      <p>&#128427;  <a href="https://{{ url.name }}">{{ url.name }}</a></p>
+      {% endfor %}
+    </div>
+  </div>
+</section>

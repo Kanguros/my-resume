@@ -1,0 +1,27 @@
+<section id="work">
+  <h3>Work</h3>
+  <div class="stack">
+    {% for job in jobs %}
+      <article>
+        <header>
+          <div class="spaced-list">
+            <h4>{{ job.name }}</h4>
+            <span>
+              <time datetime="{{ job.stardDate }}">{{ job.stardDate }}</time>
+              <time datetime="{{ job.endDate }}">{{ job.endDate }}</time>
+            </span>
+          </div>
+          <div class="spaced-list">
+            {{ job.position }}
+          </div>
+        </header>
+        {{ job.summary }}
+        <ul>
+        {% for highlight in job.highlights %}
+            <li>{{ highlight }}</li>
+        {% endfor %}
+        </ul>
+      </article>
+    {% endfor %}
+  </div>
+</section>

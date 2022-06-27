@@ -1,0 +1,22 @@
+<section id="education">
+  <h3>Learn</h3>
+  <div class="stack">
+    {% for edu in educations %}
+      <article>
+        <header>
+          <div class="spaced-list">
+            <h4>{{ edu.institution }}</h4>
+            <span>
+            <time datetime="{{ edu.stardDate }}">{{ edu.stardDate }}</time>
+            <time datetime="{{ edu.endDate }}">{{ edu.endDate }}</time>
+            </span>
+          </div>
+          <div class="spaced-list">
+            {{ edu.area }}
+          <a>{{ edu.studyType }}</a>
+          </div>
+        </header>
+      </article>
+    {% endfor %}
+  </div>
+</section>

@@ -1,36 +1,29 @@
   basics:
     name: Kamil Urbanek
     label: Automation Engineer
-    image: .\face.jpg
+    image: .\assets\img\face.jpg
     email: urbanek.kamil@gmail.com
     phone: 518-755-XXX
-    url: https://devnet.blog
     summary: 'Started in/at the bottom of a food chain as a Engineer in Master
       Control Room team. After a while I changed it to being a *secretary* of a Network
       Squad Product/Owner. As time pass by, I learned that my laziness have different
       meanings: Network Automation and DevOps. From that day, I''m trying to tell everyone
       around me why and how to do it.'
-    location:
-      address: ''
-      postalCode: ''
-      countryCode: PL
-      city: Katowice
-      region: Silesian
-    profiles:
-    - network: GitHub
-      username: kanguros
-      url: https://github.com/kanguros
-  work:
+    cc: PL
+    location: "Katowice, PL"
+    urls:
+    - name: github.com/kanguros
+    - name: devnet.blog
+  jobs:
   - name: ING Business Shared Service B.V.
     position: IAAS Network - Senior DevOps Engineer
-    url: ""
     startDate: '2021-01-01'
+    endDate: 'Present'
     summary: ""
     highlights:
     - Automatization whatever
   - name: ING Tech Poland
     position: Squad Network Stack - DevOps Engineer
-    url: ''
     startDate: '2018-05-01'
     endDate: '2021-01-01'
     summary: ''
@@ -39,13 +32,12 @@
     - Customer Experience Manager for a foreigner customer.
   - name: ING Service Polska
     position: Master Control Room - IT Engineer
-    url: ''
     startDate: '2015-08-01'
     endDate: '2018-05-01'
     summary: ''
     highlights:
     - ITIL?
-  education:
+  educations:
   - institution: "Katowice School of Economics"
     url: gwsh.pl
     area: Computer science, forensics science speciality
@@ -54,7 +46,6 @@
     endDate: '2015-09-01'
   skills:
   - name: Python
-    level: ''
     keywords:
     - requests
     - netmiko
@@ -65,7 +56,6 @@
     - pydantic
     - jinja
   - name: DevOps
-    level: ''
     keywords:
     - StackStorm
     - Git
@@ -74,7 +64,6 @@
     - Docker
     - GitHub
   - name: Network
-    level: ''
     keywords:
     - Palo Alto Panorama
     - Palo Alto Firewall
@@ -82,7 +71,6 @@
     - Cisco IOS
     - Cisco NXOS
   - name: Tools
-    level: ''
     keywords:
     - PyCharm
     - PowerShell
@@ -95,11 +83,6 @@
     highlights:
     - Write and maintain tens of Python packages, following CI/CD standards.
     - Train, guide and mentor coworkers in Python and network automation.
-    keywords: []
-    url: ''
-    roles: []
-    entity: ''
-    type: ''
   - name: Automation
     description: 'Design, implement and maintain solutions such as:'
     highlights:
@@ -107,19 +90,9 @@
     - Automated patching of various network devices.
     - Source of Truth database with data distribution to dependent entities.
     - Simplify and shorten a complex process of gathering, merging and analyzing data from different sources for formal purposes.
-    keywords: []
-    url: ''
-    roles: []
-    entity: ''
-    type: ''
   - name: Application
     description: 'Introduce and maintain an open-source orchestrating application StackStorm:'
     highlights:
     - Deployed on OpenShift. Docker images build and delivered via Azure Pipeline.
     - Components RabitMQ, Redis and MongoDB deployed and maintained using Ansible.
     - Develope and maintain custom workflows.
-    keywords: []
-    url: ''
-    roles: []
-    entity: ''
-    type: ''

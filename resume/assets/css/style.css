@@ -35,9 +35,16 @@ html {
 }
 
 
+
+
+section {
+display: contents;
+}
+
 .bodish {
-  padding: 8px 5px;
   color: var(--primaryColor);
+    margin-bottom: 4em;
+    padding-top: 10px;
   display: grid;
   font: 1em/1.5 'Fira Sans', sans-serif;
   gap: 0.8em;
@@ -45,17 +52,14 @@ html {
     [full-start]
     1fr
     [main-start side-start]
-    minmax(min-content, 5em)
+    105px
     [side-end content-start]
-    minmax(min-content, 60em)
+    635px
     [main-end content-end]
     1fr
     [full-end];
-  grid-template-rows: 1 [content] 1;
-  margin-bottom: 4em;
-  width: 210mm;
-  height: minmax(min-content, 297mm);
 }
+
 
 
 ol,
@@ -69,7 +73,6 @@ li + li {
 
 li::marker {
   color: var(--secondaryColor);
-
 }
 
 
@@ -101,13 +104,14 @@ h3 {
   grid-column: side;
   margin-bottom: 1rem;
   text-align: right;
-  margin-bottom: inherit;
+  padding-right: 0.3rem;
 }
 
 h4 {
   font-size: var(--scale3);
   line-height: 1.15;
   color: var(--titleColor);
+  margin-bottom: 2px;
 }
 
 h5 {
@@ -150,32 +154,24 @@ text-decoration: none;
 }
 
 #masthead .content {
-  grid-column: content;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-}
-
-#masthead .content .name {
-    align-self: center;
+grid-column: content;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding-top: 10px;
 }
 
 .contacts {
     justify-self: end;
-    text-align: right;
-    align-self: center;
-    text-decoration: none;
     display: flex;
     justify-content: space-between;
-    align-content: space-around;
     flex-direction: row;
-    padding-top: 5px
+    padding: 5px 0px
 }
 
 a {
-color: var(--secondaryColor);
-
+    color: var(--secondaryColor);
     text-decoration: none;
-
 }
 
 
@@ -192,6 +188,7 @@ color: var(--secondaryColor);
 article > * + *,
 blockquote > * + * {
   margin-top: 0.3em;
+
 }
 
 .stack {
@@ -222,12 +219,12 @@ blockquote > * + * {
   order: 1;
 }
 
-ul {
-list-style-type: '\23F5';
-}
-
 .spaced-list > :nth-child(2) {
   order: 2;
+}
+
+ul {
+list-style-type: '\23F5';
 }
 
 .tag-list {
@@ -251,10 +248,3 @@ list-style-type: '\23F5';
   padding: 0.2em 0.6em;
 }
 
-section {
-    display: contents;
-  }
-
-.about {
-  grid-column: content;
-}

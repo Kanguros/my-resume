@@ -1,90 +1,86 @@
-import json
+import logging
 import os
-import webbrowser
 
-import pdfkit
 import yaml
-from invoke import task, Failure
+from invoke import task
+from jinja2 import Environment, FileSystemLoader, Template
+
+logging.basicConfig(level="INFO", format='%(levelname)-8s| %(message)s')
+
+logger = logging.getLogger(__name__)
 
 
-def p(s, prefix="|> "):
-    print(f"{prefix}{s}")
+def load_yaml(filepath) -> dict:
+    logger.debug(f"Loading YAML from file [{filepath}]")
+    with open(filepath, mode="r") as f:
+        yaml_data = yaml.safe_load(f)
+        logger.debug(f"Data from YAML [{filepath}] loaded.")
+    return yaml_data
 
 
-def load_yaml(file):
-    with open(file) as f:
-        data = yaml.safe_load(f)
-        return data
+def load_jinja(folder, main_file) -> Template:
+    logger.debug(f"Setting up Jinja Environment in path [{folder}]")
+    env = Environment(
+        loader=FileSystemLoader(folder))
+    logger.debug(f"Setting Jinja Template as [{main_file}]")
+    template = env.get_template(main_file)
+    logger.debug(f"Jinja Template set")
+    return template
 
 
-def save_json(data, file):
-    with open(file, "w+") as f:
-        json.dump(data, f)
+def save_html(data, filepath) -> str:
+    logger.debug(f"Saving data [ID:{id(data)}] to HTML file [{filepath}]")
+    filepath = filepath \
+        if filepath.endswith('html') \
+        else f"{filepath}.html"
+    with open(filepath, mode="w+") as f:
+        f.writelines(data)
+    logger.debug(f"Data [{filepath}] saved.")
+    return filepath
+
+
+def get_template(path):
+    logger.debug(f"Loading Jinja template from path [{path}]")
+    folder = os.path.dirname(path)
+    main_file = os.path.basename(path)
+    return load_jinja(folder, main_file)
+
+
+INPUT_DATA = "./data.yaml"
+TEMPLATE = "./resume/template/base.html"
+OUTPUT = "./resume/resume.html"
 
 
 @task
-def parse(c):
-    """Parse content of a resume from `resume.yaml` to `resume.json."""
-    input_file = f"{c.filename}.yaml"
-    input_path = f"{c.content_folder}\\{input_file}"
-
-    p(f"Loading YAML file [{input_file}] data from folder [{input_path}]")
-    data = load_yaml(input_path)
-    p(f"Data loaded.")
-
-    json_file = f"{c.filename}.json"
-    p(f"Dumping to JSON as [{json_file}]")
-
-    json_path = f"{c.content_folder}\\{json_file}"
-    save_json(data, json_path)
-    p(f"Data saved in [{json_path}]")
-
-
-@task(parse)
 def html(c):
     """Generate resume.html."""
-    resume_path = f"{c.content_folder}\\{c.filename}.json"
-    html_file = f"{c.content_folder}\\{c.filename}.html"
 
-    p(f"Exporting [{resume_path}] with theme [{c.theme_folder}] to [{html_file}]")
+    logger.info(f"Loading input data...")
+    data = load_yaml(INPUT_DATA)
 
-    cmd = f"resume export {html_file} --resume {resume_path} --theme {c.theme_folder}"
-    p(f"Executing command [{cmd}]")
-    output = c.run(cmd)
-    if output.stderr:
-        raise Failure(f"FAILED. Export failed due to: {output['stderr']}")
-    else:
-        p(f"Resume exported as [{html_file}]")
+    logger.info(f"Getting template...")
+    template = get_template(TEMPLATE)
 
-    webbrowser.open_new_tab(os.path.abspath(html_file))
+    logger.info(f"Rendering HTML file...")
+    render = template.render(data)
+
+    logger.info(f"Page rendered. Saving...")
+    save_html(render, OUTPUT)
+    logger.info(f"Page available at {OUTPUT}")
 
 
-@task(html)
-def pdf(c):
-    PDF_OPTIONS = {
-        'enable-local-file-access': True,
-        'page-size': 'A4',
-        'margin-top': '0.75in',
-        'margin-right': '0.75in',
-        'margin-bottom': '0.75in',
-        'margin-left': '0.75in',
-        'encoding': "UTF-8"
-    }
 
-    html_file = f"{c.content_folder}\\{c.filename}.html"
-    pdf_file = f"{c.filename}.pdf"
-    p(f"Exporting [{html_file}] to [{pdf_file}]")
-    html_file = html_file.replace(r".\"", '')
-
-    with open(html_file, 'r') as f:
-        result = pdfkit.from_file(f, pdf_file,
-                                  options=PDF_OPTIONS,
-                                  verbose=True)
-
-    if not result:
-        raise Failure(f"FAILED. Export failed due to: {result}")
-    else:
-        p(f"Resume exported as [{pdf_file}]")
-    #
-    # pdfkit.from_url("https://google.com", pdf_file,
-    #                  options=PDF_OPTIONS)
+    # def _consolidate(self, path):
+    #     soup = bs4.BeautifulSoup(open(path).read(),
+    #                              features="html.parser")
+    #     stylesheets = soup.findAll("link",
+    #                                {"rel": "stylesheet"})
+    #     for style in stylesheets:
+    #         style_path = os.path.join(os.path.dirname(path),
+    #                                   str(style["href"]).replace('./', ''))
+    #         style_data = bs4.element.NavigableString(open(style_path).read())
+    #         tag_style = soup.new_tag('style')
+    #         tag_style.insert(0, style_data)
+    #         tag_style['type'] = 'text/css'
+    #         style.replaceWith(tag_style)
+    #     open(path, "w").write(str(soup))
