@@ -8,7 +8,7 @@ authors = ["Kamil Urbanek <urbanek.kamil@gmail.com>"]
 python = "^3.8"
 PyYAML = "^6.0"
 invoke = "^1.7.1"
-pdfkit = "^1.0.0"
+Jinja2 = "^3.1.2"
 
 [tool.poetry.dev-dependencies]
 

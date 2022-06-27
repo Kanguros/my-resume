@@ -1,0 +1,20 @@
+<section id="projects">
+  <h3>Done</h3>
+  <div class="grid-list">
+  {% for project in projects %}
+    <article>
+      <div class="spaced-list">
+        <h4>{{ project.name }}</h4>
+        <span>
+        </span>
+      </div>
+      {{ project.description }}
+      <ul>
+      {% for highlight in project.highlights %}
+        <li>{{ highlight }}</li>
+      {% endfor %}
+      </ul>
+    </article>
+  {% endfor %}
+  </div>
+</section>
