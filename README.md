@@ -10,8 +10,8 @@ To simplify the generating process, Python's libraries `jinja` and `invoke` are 
 ### Files and folders
 
 - `notes` - My more-or-less raw notes.
-- `resume` - Theme for `jsonresume`. It is a copy/paste of default one. 
-- `tasks.py` - 'invoke' task's.
+- `resume` - Folder for theme and its assets.
+- `tasks.py` - `invoke` task's.
 
 
 ## Usage
@@ -20,10 +20,4 @@ To simplify the generating process, Python's libraries `jinja` and `invoke` are 
 invoke html
 ```
 
-## Development
-
-
-
-```commandline
- resume export resume.html --theme .\theme_even\
-```
+Create HTML single page, prepared to be print to PDF. 
